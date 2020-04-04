@@ -16,13 +16,22 @@ public class PlayerMove : MonoBehaviour
 
     private bool isJumping;
 
+    public bool isCrouching = false;
+
+
     private bool isSprinting;
 
-    private float colY;
+    private float originalHeight;
+
+    [SerializeField] private float charHeightCrouch = 0.5f;
+
+    
 
     private void Awake()
     {
         charController = GetComponent<CharacterController>();
+        originalHeight = charController.height;
+                 
     }
 
 
@@ -38,12 +47,18 @@ public class PlayerMove : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
+            isCrouching = true;
             StartCrouch();
         }
+
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
-            StopCrouch();
+            isCrouching = false;
+            EndCrouch();
         }
+
+
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -86,13 +101,22 @@ public class PlayerMove : MonoBehaviour
 
     private void StartCrouch()
     {
-        Debug.Log(" Standing ");
+        if (isCrouching == true)
+        {
+            charController.height = charHeightCrouch;
+            Debug.Log(" Crouching ");
+        }
     }
 
-    private void StopCrouch()
+    private void EndCrouch()
     {
-         Debug.Log(" Crouching ");
-    }
+        if (isCrouching == false)
+        {
+            charController.height = originalHeight;
+            Debug.Log(" Standing ");
+        }
+    }          
+
 
     private void StartSprint()
     {
