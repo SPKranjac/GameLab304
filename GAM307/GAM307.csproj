@@ -622,8 +622,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Steve\_Scripts\NPCMove.cs" />
     <Compile Include="Assets\Steve\_Scripts\PlayerLook.cs" />
     <Compile Include="Assets\Steve\_Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Steve\_Scripts\RandomPatrol.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
