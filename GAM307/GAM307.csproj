@@ -626,6 +626,8 @@
     <Compile Include="Assets\Steve\_Scripts\PlayerLook.cs" />
     <Compile Include="Assets\Steve\_Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Steve\_Scripts\RandomPatrol.cs" />
+    <Compile Include="Assets\Steve\_Scripts\SimplePatrol.cs" />
+    <Compile Include="Assets\Steve\_Scripts\Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
