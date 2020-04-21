@@ -5,127 +5,44 @@ using UnityEngine.AI;
 
 public class SimplePatrol : MonoBehaviour
 {
-    //if the enemy will wait at each point or not
-    [SerializeField]
-    bool patrolWaiting;
-
-    //Wait time for each node
-    [SerializeField]
-    float totalwaitingtime = 3f;
-
-    //Chance of Changing direction
-    float chanceofswitching = 0.1f;
-
-    //List of nodes to visit
-    [SerializeField]
-    List<Waypoint> patrolPoints = new List<Waypoint>();
-
-    //Private variable for base behavoir
-    NavMeshAgent navMeshAgent;
-    int currentPatrolIndex;
-    bool travelling;
-    bool waiting;
-    bool patrolForward;
-    float waitTimer;
-
-    public List<Waypoint> PatrolPoints
-    {
-        get
-        {
-            return patrolPoints;
-        }
-
-        set
-        {
-            patrolPoints = value;
-        }
-    }
+    public Transform pos1;
+    public Transform pos2;
+    public Transform pos3;
+    public Transform pos4;
 
 
-    // Start is called before the first frame update
+    private NavMeshAgent enemy;
+
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-
-        if(navMeshAgent == null)
-        {
-            Debug.Log(" No Nav Mesh attached to " + gameObject.name);
-        }
-        else
-        {
-            if (patrolPoints != null && patrolPoints.count >= 2)
-            {
-                currentPatrolIndex = 0;
-                SetDestination();
-            }
-            else
-            {
-                Debug.Log(" Insufficient patrol points to be able to patrol ");
-            }
-        }
+        enemy = gameObject.GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //is the destination close?
-        if(travelling && navMeshAgent.remainingDistance <= 1.0f)
-        {
-            travelling = false;
-            //are we going to wait in place?
-            if(patrolWaiting)
-            {
-                waiting = true;
-                waitTimer = 0f;
-            }
-            else
-            {
-                ChangePatrolPoint();
-                SetDestination();
-            }
-
-        }
-        //If we are waiting already
-        if(waiting)
-        {
-            waitTimer += Time.deltaTime;
-            if(waitTimer >= totalwaitingtime)
-            {
-                waiting = false;
-
-                ChangePatrolPoint();
-                SetDestination();
-            }
-        }
+        
     }
 
-    void SetDestination ()
+    void OnTriggerEnter(Collider other)
     {
-        if(patrolPoints !=null )
+        if(other.tag == "Point 1")
         {
-            Vector3 targetVector = patrolPoints[currentPatrolIndex].transform.position;
-            navMeshAgent.SetDestination(targetVector);
-            travelling = true;
-        }
-    }
-
-    void ChangePatrolPoint()
-    {
-        if(UnityEngine.Random.Range(0f, 1f) <= chanceofswitching)
-        {
-            patrolForward = !patrolForward;
+            enemy.SetDestination(pos2.position);
         }
 
-        if(patrolForward)
+        if (other.tag == "Point 2")
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.count;
+            enemy.SetDestination(pos3.position);
         }
-        else
+
+        if (other.tag == "Point 3")
         {
-            if(-- currentPatrolIndex < 0)
-            {
-                currentPatrolIndex = patrolPoints.count - 1;
-            }
+            enemy.SetDestination(pos4.position);
+        }
+
+        if (other.tag == "Point 4")
+        {
+            enemy.SetDestination(pos1.position);
         }
     }
 }
