@@ -9,6 +9,7 @@ public class SimplePatrol : MonoBehaviour
     public Transform pos2;
     public Transform pos3;
     public Transform pos4;
+    public Transform player;
 
 
     private NavMeshAgent enemy;
@@ -16,6 +17,9 @@ public class SimplePatrol : MonoBehaviour
     void Start()
     {
         enemy = gameObject.GetComponent<NavMeshAgent>();
+
+        
+
     }
 
     void Update()
@@ -44,5 +48,21 @@ public class SimplePatrol : MonoBehaviour
         {
             enemy.SetDestination(pos1.position);
         }
+
+        if (other.tag == "Player")
+        {
+            Debug.Log(" Player Detected");
+            enemy.SetDestination(player.position);
+            Debug.Log(" Following player for 3 seconds");
+            PlayerFollow();
+        }
+    }
+
+    IEnumerator PlayerFollow()
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log(" Following player for 3 seconds");
+        enemy.SetDestination(pos1.position);
+        
     }
 }
