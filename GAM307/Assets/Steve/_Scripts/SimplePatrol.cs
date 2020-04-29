@@ -10,6 +10,7 @@ public class SimplePatrol : MonoBehaviour
     public Transform pos3;
     public Transform pos4;
     public Transform player;
+    public Transform startArea;
 
 
     private NavMeshAgent enemy;

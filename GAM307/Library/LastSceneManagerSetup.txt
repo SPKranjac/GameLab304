@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Steve/_Scenes/EnemyPatrolSetPoints.unity
-  isLoaded: 1
-  isActive: 1
