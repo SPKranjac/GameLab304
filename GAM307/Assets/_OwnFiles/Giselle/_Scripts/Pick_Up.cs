@@ -6,7 +6,7 @@ public class Pick_Up : MonoBehaviour
 {
     public Transform onHand;
 
-    public Flashlight flashlight;
+    //public Flashlight flashlight;
     public GameObject Pickup_Prompt;
 
     private void OnMouseDown()
@@ -30,7 +30,7 @@ public class Pick_Up : MonoBehaviour
     public void Pickup()
     {
         Destroy(gameObject);
-        flashlight.PickUp();
+        //flashlight.PickUp();
     }
 
     private void OnTriggerStay(Collider collider)
