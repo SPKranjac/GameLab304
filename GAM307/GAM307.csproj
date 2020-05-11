@@ -633,8 +633,13 @@
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\RandomPatrol.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\SimplePatrol.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\Waypoint.cs" />
+    <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Camera_Movement.cs" />
+    <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Door.cs" />
+    <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Player_Movement.cs" />
+    <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Switch.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\ProjectSettings\ProjectVersion.txt" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
