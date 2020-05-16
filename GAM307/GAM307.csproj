@@ -671,6 +671,7 @@
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Door.cs" />
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Player_Movement.cs" />
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Switch.cs" />
+    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\ProjectSettings\ProjectVersion.txt" />

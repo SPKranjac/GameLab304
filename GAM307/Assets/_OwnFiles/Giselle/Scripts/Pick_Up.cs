@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pick_Up : MonoBehaviour
 {
@@ -9,10 +7,8 @@ public class Pick_Up : MonoBehaviour
     private void OnMouseDown()
     {
         GetComponent<Rigidbody>().useGravity = false;
-        this.transform.position =
-            onHand.transform.position;
-        this.transform.parent =
-            GameObject.Find("FirstPersonPlayer").transform;
+        this.transform.position = onHand.transform.position;
+        transform.parent = GameObject.Find("FirstPersonPlayer").transform;
 
     }
 
