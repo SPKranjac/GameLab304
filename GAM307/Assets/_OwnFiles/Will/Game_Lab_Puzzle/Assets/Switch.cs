@@ -15,8 +15,7 @@ public class Switch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      SwitchFlip = GetComponent<Animator>();
-      DoorOpen = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -34,6 +33,7 @@ public class Switch : MonoBehaviour
             {
                 //Interact_Prompt.SetActive(false);
                 SwitchOn();
+                DoorActivated();
             }
         }
     }
