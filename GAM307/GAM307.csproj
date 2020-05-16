@@ -664,6 +664,7 @@
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\PlayerLook.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\PlayerMove.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\RandomPatrol.cs" />
+    <Compile Include="Assets\_OwnFiles\Steve\_Scripts\Rotation.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\SimplePatrol.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\Waypoint.cs" />
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Camera_Movement.cs" />
