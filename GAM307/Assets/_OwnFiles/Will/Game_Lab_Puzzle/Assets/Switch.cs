@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject Interact_Prompt;
+    //public GameObject Interact_Prompt;
 
     public bool IsSwitchFlipped = false;
     public bool IsDoorActivated = false;
@@ -28,7 +28,7 @@ public class Switch : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Interact_Prompt.SetActive(true);
+            //Interact_Prompt.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //Interact_Prompt.SetActive(false);
@@ -72,7 +72,7 @@ public class Switch : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Interact_Prompt.SetActive(false);
+            //Interact_Prompt.SetActive(false);
         }
     }
 }

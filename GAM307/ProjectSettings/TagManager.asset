@@ -9,6 +9,9 @@ TagManager:
   - Point 2
   - Point 3
   - Point 4
+  - Key
+  - Item_Held
+  - Ball
   layers:
   - Default
   - TransparentFX

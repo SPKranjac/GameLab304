@@ -659,6 +659,7 @@
     <Compile Include="Assets\_OwnFiles\Giselle\Scripts\Pick_Up.cs" />
     <Compile Include="Assets\_OwnFiles\Giselle\Scripts\PlayerFollow.cs" />
     <Compile Include="Assets\_OwnFiles\Giselle\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\_OwnFiles\Steve\_Scripts\FallingKeyu.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\NPCMove.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\PatrolNew.cs" />
     <Compile Include="Assets\_OwnFiles\Steve\_Scripts\PlayerLook.cs" />
@@ -671,6 +672,7 @@
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Door.cs" />
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Player_Movement.cs" />
     <Compile Include="Assets\_OwnFiles\Will\Game_Lab_Puzzle\Assets\Switch.cs" />
+    <Compile Include="Assets\Restart.cs" />
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
   </ItemGroup>
   <ItemGroup>
