@@ -8,7 +8,7 @@ public class Pick_Up : MonoBehaviour
     {
         GetComponent<Rigidbody>().useGravity = false;
         this.transform.position = onHand.transform.position;
-        transform.parent = GameObject.Find("FirstPersonPlayer").transform;
+        transform.parent = GameObject.Find("Player").transform;
 
     }
 
