@@ -6,6 +6,7 @@ public class RandomPatrol : MonoBehaviour
 {
     [SerializeField] float speed = 10f;
     [SerializeField] float waitTime = 3f;
+    private GameObject floor;
 
     float currentWaitTime = 0f;
 
@@ -29,8 +30,8 @@ public class RandomPatrol : MonoBehaviour
     
     private void FindGroundSize()
     {
-        GameObject ground = GameObject.FindWithTag("Ground");
-        Renderer groundSize = ground.GetComponent<Renderer>();
+        GameObject floor = GameObject.FindWithTag("Ground");
+        Renderer groundSize = floor.GetComponent<Renderer>();
         minX = (groundSize.bounds.center.x - groundSize.bounds.extents.x);
         maxX = (groundSize.bounds.center.x + groundSize.bounds.extents.x);
         minZ = (groundSize.bounds.center.z - groundSize.bounds.extents.z);
